@@ -1,3 +1,5 @@
+using WorkHours.Domain.Enums;
+
 namespace WorkHours.Domain.Entities;
 
 public class Project
@@ -11,6 +13,7 @@ public class Project
     public Guid? ExecutorId { get; set; }
     public DateTime? Start { get; set; }
     public DateTime? End { get; set; }
+    public State State { get; set; }
     
     public Project(
         string name, 
@@ -29,5 +32,6 @@ public class Project
         Description = description;
         Start = start;
         End = end;
+        State = State.New;
     }
 }
