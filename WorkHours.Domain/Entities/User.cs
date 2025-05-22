@@ -15,7 +15,8 @@ public class User
     public Guid CompanyId { get; set; }
     public Department Department { get; set; }
     public Guid DepartmentId { get; set; }
-    public List<Project> Projects { get; set; } = [];
+    public List<Project> InitializedProjects { get; set; } = [];
+    public List<Project> ExecutingProjects { get; set; } = [];
     public List<WorkLog> WorkLogs { get; set; } = [];
     
     public User(
